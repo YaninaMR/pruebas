@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Enlazamos nuestro framework _materialize_ -->
+    <link rel="stylesheet" href="../vendors/materialize/css/materialize.min.css">
+    <!-- Enlazamos nuestra hoja de estilo css -->
+    <link rel="stylesheet" href="../css/register.css">
+    <!-- Enlazamos nuestro logo -->
+    <link rel="shortcut icon" href="../assets/logo/logo-sinfondo1.png">
+    <!-- Enlazamos los íconos de mayterialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Enlazamos íconos de fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Q'apiriy</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">
+                <img src="../assets/logo/logo-navbar.png" class="logo-img" alt="">
+            </a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down list-home">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+                <li>
+                    <a href="https://github.com/YoannaHS/q-apiriy/blob/master/readme.md" target="_black">Sobre Nosotros</a>
+                </li>
+                <li>
+                    <a href="#">Regístrate</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <div class="row section">
+            <div class="slider col l6 offset-l1 hide-on-small-only style-slider" id="fullscreen">
+                <ul class="slides">
+                    <li>
+                        <img src="../assets/img/todos-unidos.png">
+                        <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>APRENDE, COMPARTE ... VIAJA!</h3>
+                            <h5 class="light grey-text text-lighten-3">Conviérte en una mejor versión de ti mismo.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../assets/img/img-index/img-1.png">
+                        <!-- random image -->
+                        <div class="caption left-align">
+                            <h3>Impacto Social</h3>
+                            <h5 class="light grey-text text-lighten-3">Voluntariado en ONGs, escuelas y proyectos sociales.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../assets/img/img-index/img-2.png">
+                        <!-- random image -->
+                        <div class="caption right-align">
+                            <h3>Explora el Perú en una comunidad dispuestos a colaborar</h3>
+                            <h5 class="light grey-text text-lighten-3">Experiencias que impactan vidas.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../assets/img/img-index/img-3.png">
+                        <!-- random image -->
+                        <div class="caption center-align">
+                            <h3>Vive experiencias increíbles ... Construye nuevas relaciones!</h3>
+                            <h5 class="light grey-text text-lighten-3">Nadie puede hacer todo, pero todos podemos hacer algo.</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col s8 offset-s2 col l3 offset-l1">
+                <div class="col s12 m12 white t-row hoverable style-login">
+                    <div class="card no-shadow transparent">
+                        <div class="card-content">
+                            <span class="card-title">Inicia sesión</span>
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field">
+                                        <input id="first_name" type="text" class="teal-text">
+                                        <label for="first_name">Correo</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <input id="password" type="password" class="teal-text">
+                                        <label for="password">Clave</label>
+                                    </div>
+                                </div>
+                            </form>
+                            <p>
+                                <input type="checkbox" id="remember" />
+                                <label for="remember">Recuérdame</label>
+                            </p>
+                        </div>
+                        <!-- Enlazamos las redes sociales para loguearse -->
+                        <div class="center-align">
+                            <div class="col s4 l4">
+                                <button type="button" name="button" class="waves-effect waves-light btn-floating social google" id="google" style="background: #dd4b39">
+                                    <i class="fa fa-google"></i> Ingresa con Google
+                                </button>
+                            </div>
+                            <div class="col s4 l4">
+                                <a class="waves-effect waves-light btn-floating social facebook" id="facebook" style="background: #3d5b99">
+                                    <i class="fa fa-facebook"></i> Ingresa con Facebook
+                                </a>
+                            </div>
+                            <div class="col s4 l4">
+                                <a class="waves-effect waves-light btn-floating social twitter" id="twitter" style="background: #55acee">
+                                    <i class="fa fa-twitter"></i> Ingresa con Twitter
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card-action center col s12 l12">
+                            <a id="login" class="btn-flat">
+                                Login
+                                <i class="material-icons right loginFly">send</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Enlazamos la librería Jquery -->
+    <script src="../vendors/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Enlazamos nuestro proyecto de firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyC4YzfP_Naxc6U8hhhN9gy8kIFmo0ARNZc",
+        authDomain: "first-project-66342.firebaseapp.com",
+        databaseURL: "https://first-project-66342.firebaseio.com",
+        projectId: "first-project-66342",
+        storageBucket: "first-project-66342.appspot.com",
+        messagingSenderId: "526633369509"
+        };
+       firebase.initializeApp(config);
+    </script>
+    <!-- Enlazamos el archivo jquery de materialize -->
+    <script src="../vendors/materialize/js/materialize.min.js"></script>
+    <!-- Enlazamos nuestro archivo JS -->
+    <script src="../js/register.js"></script>
+</body>
+</html>
